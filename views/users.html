@@ -1,0 +1,22 @@
+{% extends './layout.html' %}
+{% block content %}
+            <form action='/user' method='POST'>
+                <div>
+                    <label>Username</label>
+                    <input name='name' />                
+                </div>
+                <button>Create User</button>
+            </form>
+            <ul>
+                {% for user in users %}
+                <li>
+                    <a href='/users/{{user.id}}'> 
+                        {{ user.name }}
+                        </a>
+                    <form method='POST' action='/users/{{ users.id}}?_method=DELETE'>
+                        <button> Delete </button>
+                    </form>
+                </li>
+                {% endfor %}
+            </ul>
+{% endblock %}

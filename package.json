@@ -1,0 +1,32 @@
+{
+  "name": "acme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "DATABASE_URL=postgres://localhost/my_seq_acme_db nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderLevin1/acme-overview.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexanderLevin1/acme-overview/issues"
+  },
+  "homepage": "https://github.com/AlexanderLevin1/acme-overview#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bootstrap": "^4.0.0",
+    "express": "^4.16.2",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0",
+    "nunjucks": "^3.0.1",
+    "path": "^0.12.7",
+    "pg": "^7.4.1",
+    "sequelize": "^4.32.6"
+  }
+}

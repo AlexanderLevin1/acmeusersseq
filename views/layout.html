@@ -1,0 +1,15 @@
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/vendor/bootstrap/dist/css/bootstrap.css' />
+  </head>
+  <body>
+    <div class='container'>
+      <h1>{{ title }}</h1>
+      {% include './_nav.html' %}
+      {% block content %}
+      {% endblock %}
+      </div>
+    </div>
+  </body>
+</html>
