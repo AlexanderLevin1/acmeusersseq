@@ -11,6 +11,12 @@ app.get('/', (req, res, next) => {
     .catch( err => next(err));
 });
 
+app.get('/:id', (req, res, next) => {
+    User.findById(req.params.id)
+    .then( user => res.send(user))
+    .catch( err => next(err));
+});
+
 app.post('/', (req, res, next) => {
     User.create(req.body)
     .then( user => res.redirect('/users'))
